@@ -1,0 +1,3 @@
+Proof of concept for an issue with Kafka and Unity following steps found [here](https://github.com/confluentinc/confluent-kafka-dotnet/issues/1184#issuecomment-998896680)
+
+Code in KafkaConsumer is not my own, it's from a reply in the same thread. The SampleScene has a simple GameObject that tries to connect to a nonexistant Kafka server. When run this will trigger an error that it has "failed to load librdkafka native library" and fail. Because of the quirks of the code I sourced this happens outside of the main thread but the principle is the same.
